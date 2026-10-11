@@ -1,8 +1,16 @@
 import pytest
 import app
 
+
 def test_compliance_suite():
     assert app.add(10, 5) == 15
+
+
+def test_subtract():
+    assert app.subtract(10, 5) == 5
+    assert app.subtract(5, 10) == -5
+    assert app.subtract(0, 0) == 0
+
 
 def test_generate_runtime_diagnostics():
     """
